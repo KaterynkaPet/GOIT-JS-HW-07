@@ -17,5 +17,5 @@ function handleSubmit(event) {
     }
     console.log(formData);
   }
-  formorm.reset();
+  form.reset();
   }

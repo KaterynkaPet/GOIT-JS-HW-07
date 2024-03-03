@@ -1,20 +1,23 @@
-const userName = document.querySelector("#name-input");
-const newUserName = document.querySelector("#name-output");
-userName.addEventListener("input", handleInput); 
+const userNameInput = document.querySelector("#name-input");
+const userNameOutput = document.querySelector("#name-output");
 
-function handleInput(event) {
-    const inputValue = event.currentTarget.value;
-    console.log(inputValue);
-
-    if (inputValue === "" && inputValue === " ") {
-        document.body.append(`${newUserName}`);
+userNameInput.addEventListener("input", (event) => {
+    const inputValue = event.currentTarget.value.trim();
+    
+    if (inputValue.length === 0) {
+        userNameOutput.textContent = "Anonymous";
     }
     else {
-        newUserName.textContent = inputValue;
-        
+        userNameOutput.textContent = event.currentTarget.value.trim();        
     }
+}); 
+
+
     
-}
+    
+
+    
+
 
 
 
